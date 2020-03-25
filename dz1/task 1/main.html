@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<head>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<header>
+		<img src="https://ffl.org.ua/admin/images/command/1/1523866190_7751.png" alt="Club Logo" class="header-img">
+		<h1>FSC Krystal Chortkiv</h1>
+		<main><h3>Офіційний веб-сайт клубу ФСК Чортків</h3></main>
+	</header>
+	<aside>
+		<nav>
+			<a href="./squad.html">Склад команди</a>
+			<a href="./schedule.html">Календар матчів</a>	
+		</nav>
+		<article class="stats-box">
+			Найкращі бомбардири "Кристала" за всю історію:
+			<ol>
+				<li><bdi>Олег Яковищак</bdi>(21 гол)</li>	
+				<li><bdi>Сергій Маньовський</bdi>(20 голів)</li>	
+				<li><bdi>Олег Грипа(13 голів)</bdi></li>	
+			</ol>
+		</article>
+		<article>
+			<p>Goals scored this season</p>
+			<progress value="1" max="50">
+		</article>
+	</aside>
+	<section class="content-section">
+		<article>
+			<p>Days Left:</p>
+			<meter max="30" low="7" high="18" value="21" name="days_left"></meter>
+		</article>
+		<article>
+		Кристал відправиться в перед<wbr>сезонне турне в Польщу
+		<canvas id="poland-flag"></canvas>
+			<details><summary>Детальніше</summary>
+			Чортківська команда відправиться в містечко Завадзьке. 
+			<p>Перша гра відбудеться<time datetime="2020-07-01 17:00"> 1 липня</time>.</p>
+			<figure>
+				<picture>
+					<source srcset="./media/images/zawadzkie.jpg" alt="Zawadzkie Club Logo" class="article-img" media="(max-width:1000px)">
+					<img src="https://zawadzkie.pl/download//13327/20190616_1906110-002.jpeg" alt="Zawadzkie Football Club" class="article-img">	
+				</picture>
+			<figcaption>Команда Завадзьке одна з 5, з якими проведе спаринги Кристал в Польщі</figcaption></figure>
+			</details>
+		</article>
+		<article>
+			<details><summary>Гімн клубу</summary>
+			<audio controls src="./media/audio/kozak_system_-_nash_manifest_(zf.fm).mp3">
+			Your browser can not display the best track in the world
+			</audio></details>
+		</article>
+		<article>
+			Ваш улюблений гравець, який <mark>зараз грає</mark> за "Кристал"
+			<input list="players">
+			<datalist id="players"> 
+				<option>Назар Маньовський</option>
+				<option>Олег Яковишак</option>
+				<option>Іван Брикайло</option>
+				<option>Петро Смаглій</option>
+				<option>Михайло Бойчук</option>
+				<option>Олег Дідюк</option>
+				<option>Олег Мадяра</option>
+				<option>Андрій Василишин</option>
+				<option>Хтось інший</option>
+			</datalist>
+		</article>
+		<article>
+			Купіть квитки на майбутні матчі Кристалу. Більше ігор за раз - менша ціна за матч.
+			<form oninput="matches.value=Math.floor(parseInt(money.value)/55)">
+				<input type="number" id="tickets-money" name="money" placeholder="Введіть скільки грошей ви хочете заплатити"><br>
+				<output name="matches" for="money">0</output>
+			</form>
+		</article>
+		<section>
+			<details><summary>Video</summary>
+				<video controls src="./media/video/EL_rondo.mp4">
+				<track default kind="subtitles" srclang="en" src="./media/video/subtitles.txt">
+			</video>
+		</details>
+			
+		</section>
+		<section>
+			<details><summary>Embed</summary>
+			<embed src="https://giphy.com/embed/NWlBEcDW5evFS"></embed>	
+			</details>
+		</section>
+		<dialog id="starting-dialog" open>
+ 			<p>Ви фан Кристала?</p>
+ 			<button id="dialog-accept-button">Так</button>
+ 			<button id="dialog-reject-button">Ні</button>
+		</dialog>
+		<template>
+  			<h2>Flower</h2>
+		</template>
+
+	</section>
+	<footer></footer>
+</body>
+
+<script type="text/javascript" src="./javascripts/main.js"></script>

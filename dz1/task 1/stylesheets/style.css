@@ -1,0 +1,85 @@
+.header-img
+{
+	height: 150px;
+	vertical-align: middle;
+}
+
+.article-img
+{
+	height: 100%;
+	vertical-align: center;
+}
+
+.stats-box
+{
+	border: 1px solid #1f1f1f;
+	border-radius: 10px;
+}
+
+.content-section
+{
+	display: grid;
+	grid-column: 1;
+}
+
+.tickets-money
+{
+	width: 225px;
+}
+
+header
+{
+	text-align: center;
+}
+
+h1
+{
+	display: inline;
+}
+
+canvas
+{
+	width: 20px;
+	height: 12px;
+	border: 1px solid black; 
+}
+
+aside 
+{
+	float: left;
+	width: 20%;
+	padding: 5px;
+	margin: 5px;
+}
+
+article
+{
+	margin: 10px;
+	padding: 5px;
+	width: 80%
+	text-align: left;
+	float: left;
+	display: block;
+}
+
+details 
+{
+	background-color: #d3d3d3;
+	padding: 5px;
+}
+
+nav 
+{
+	display: grid;
+	grid-column: 1;
+}
+
+fieldset
+{
+	border: 0px;
+}
+
+video
+{
+	width: 50%;
+}

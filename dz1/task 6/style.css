@@ -1,0 +1,88 @@
+.flex-table
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-table .flex-row
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-row .flex-column
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row .flex-subrow
+{
+	display: flex;
+	flex-direction: row;
+}
+
+img
+{
+	width: 250px;
+	height: 250px;
+}
+
+#collage-img-1
+{
+
+}
+
+#collage-img-2
+{
+}
+
+#collage-img-3
+{
+
+}
+
+#collage-img-3
+{
+}
+
+#collage-img-4
+{
+}
+
+#collage-img-5
+{
+}
+
+#collage-img-6
+{
+	height: 500px;
+}
+
+#collage-img-7
+{
+
+}
+
+#collage-img-8
+{
+}
+
+#collage-img-9
+{
+
+}
+
+#collage-img-10
+{
+	width: 125px;
+}
+
+#collage-img-11
+{
+	width: 125px;
+}
+
+#collage-img-12
+{
+}
