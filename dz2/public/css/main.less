@@ -1,0 +1,49 @@
+.main
+{
+	grid-column-start: 1;
+	grid-column-end: 9;
+	display: grid;
+	grid-template-columns: inherit;
+	grid-column-gap: inherit;
+	border-bottom: 5px solid #c70000;
+	background-color: #f7f9fa;
+
+	&-image
+	{
+		grid-column-start: 1;
+		grid-column-end: 6;
+	}
+	&-article
+	{
+		grid-column-start: 6;
+		grid-column-end: 9;
+		position: relative;
+		padding-right: 1.6em;
+		padding-bottom: 3.5em;
+		
+		&__header
+		{
+			font-family: 'PT Sans',bold,sans-serif;
+			font-size: 30px;
+			padding-top: .5em;
+			padding-bottom: .5em;
+			color: #c80000;
+		}
+		&__pagination
+		{
+			text-align: right;
+			margin: 1em;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+		}
+		&__page
+		{
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			font-size: 18px;
+			font-family: "PT Sans";
+		}
+	}
+}
