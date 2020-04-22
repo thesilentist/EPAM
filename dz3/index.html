@@ -1,0 +1,59 @@
+<!Doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Lab 3</title>
+	<link rel="stylesheet" type="text/css" href="./public/styles/style.css">
+</head>
+
+<body>
+	<details class="task1-details">
+		<summary>Task 1 (Future Predictor)</summary>
+		<div class="task1-question">
+			<h2 class="task1-question__header">Choose your gender</h2>
+			<input name="gender" type="radio" id="genderF">Female</input>
+			<input name="gender" type="radio" id="genderM">Male</input>
+			<input name="gender" type="radio" id="genderO" checked>Other</input>
+		</div>
+		<div class="task1-question">
+			<h2 class="task1-question__header">Choose type of prediction</h2>
+			<input name="gamemode" type="radio" id="typeF" checked>Family</input>
+			<input name="gamemode" type="radio" id="typeC">Career</input>
+		</div>
+		<button class="task1-start"><span>Start a game!</button>
+	</details>
+	<details class="task2">
+		<summary>Task 2 (Pascal’s Triangle)</summary>
+		<section class="task2-input">
+			<h2>Enter number of rows in Pascal's Triangle</h2>
+			<input type="number" min="1" max="15" value="3" class="task2-input__number">
+			<input type="range" min="1" max="15" value="3" class="task2-input__range">
+			<button class="task2-input__build">Build</button>
+			<button class="task2-input__clear">Clear</button>
+		</section>
+			<p class="task2-result"></p>
+	</details>
+	<details class="task3">
+		<summary>Task 3 (How many bottles are left on the table)</summary>
+		<h2 class="task3-question">How many bottles are on the table now?</h2>
+		<input type="number" min="0" max="80" value="50" class="task3-input__number">
+		<button class="task3-input__start">'Bottle falling pandemic' start</button>
+		<p class="task3-result"></p>
+	</details>
+	<details class="task4">
+		<summary>Task 4</summary>
+		<div class="task4-sum">
+			<button class="task4-sum__button">Sum all less then 100 USD</button>
+			<p class="task4-sum__result"></p>
+		</div>
+		<div task4-euro>
+			<button class="task4-eur__button">Show all doubled EUR</button>
+			<p class="task4-eur__result"></p>
+		</div>
+	</details>
+</body>
+
+<script type="text/javascript" src="./public/javascripts/1.js"></script>
+<script type="text/javascript" src="./public/javascripts/2.js"></script>
+<script type="text/javascript" src="./public/javascripts/3.js"></script>
+<script type="text/javascript" src="./public/javascripts/4.js"></script>
