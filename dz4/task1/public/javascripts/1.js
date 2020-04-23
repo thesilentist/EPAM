@@ -1,75 +1,70 @@
-let image = document.getElementsByClassName('main__image')[0];
-let widthInput = document.getElementById('widthInput');
-let heightInput = document.getElementById('heightInput');
-let borderWidthInput = document.getElementById('borderWidthInput');
-let borderColorInput = document.getElementById('borderColorInput');
-let altInput = document.getElementById('altInput');
-let applyButton = document.getElementsByClassName('apply__button')[0];
+const image = document.getElementsByClassName('main__image')[0];
+const widthInput = document.getElementById('widthInput');
+const heightInput = document.getElementById('heightInput');
+const borderWidthInput = document.getElementById('borderWidthInput');
+const borderColorInput = document.getElementById('borderColorInput');
+const altInput = document.getElementById('altInput');
+const applyButton = document.getElementsByClassName('apply__button')[0];
+const stringTemplate = /^[a-zA-Z]+$/;
+const numberTemplate =  /^[0-9]+$/;
 
 widthInput.addEventListener('change',() => {
-	if (widthInput.value > window.innerWidth || widthInput.value < 1) {
-		widthInput.parentNode.style = 'border-color : #ff3333;';
-		applyButton.disabled = true;
-	} else {
-		widthInput.parentNode.style = 'border-color : darkgray;';
-		applyButton.disabled = false;
-	}
+	checkNumberInput(widthInput,1,window.innerWidth);
 });
 
 heightInput.addEventListener('change',() => {
-	if (heightInput.value > window.innerHeight || heightInput.value < 1) {
-		heightInput.parentNode.style = 'border-color : #ff3333;';
-		applyButton.disabled = true;	
-	} else {
-		heightInput.parentNode.style = 'border-color : darkgray;';
-		applyButton.disabled = false;
-	}
+	checkNumberInput(heightInput,1,window.innerHeight);
 });
 
 borderWidthInput.addEventListener('change',() => {
-	if (borderWidthInput.value > 20 || borderWidthInput.value < 0) {
-		borderWidthInput.parentNode.style = 'border-color : #ff3333;';
-		applyButton.disabled = true;
-	} else {
-		borderWidthInput.parentNode.style = 'border-color : darkgray;';
-		applyButton.disabled = false;
-	}
+	checkNumberInput(borderWidthInput,0,20);
 });
 
 borderColorInput.addEventListener('change',() => {
 	if (isValidColor(borderColorInput.value)) {
-		applyButton.disabled = false;
+		validInput(borderColorInput);
 	} else {
-		applyButton.disabled = true;
+		invalidInput(borderColorInput);
 	}
 });
 
 altInput.addEventListener('change',() => {
-	if (altInput.value.match(/^[a-zA-Z]+$/)) {
-		altInput.parentNode.style = 'border-color : darkgray;';
-		applyButton.disabled = false;
+	if (altInput.value.match(stringTemplate)) {
+		validInput(altInput);
 	} else {
-		altInput.parentNode.style = 'border-color : #ff3333;';
-		applyButton.disabled = true;
+		invalidInput(altInput);
 	}
 });	
 
 
 
 applyButton.addEventListener('click', () => {
-	image.style.width = widthInput.value + "px";
-	image.style.height = heightInput.value + "px";
-	image.style.border = borderWidthInput.value + 'px solid ' + borderColorInput.value;
+	image.style.width = `${widthInput.value}px`;
+	image.style.height = `${heightInput.value}px`;
+	image.style.border = `${borderWidthInput.value}px solid ${borderColorInput.value}`;
 	image.alt = altInput.value;
 });
 
 function isValidColor(strColor) {
-  var s = new Option().style;
-  s.color = strColor;
-
-  // return 'false' if color wasn't assigned
-  return s.color == strColor.toLowerCase();
+	let s = new Option().style;
+	s.color = strColor;
+	return s.color == strColor.toLowerCase();
 }
 
+function checkNumberInput(input, minValue, maxValue) {
+	if (input.value.match(numberTemplate) && input.value <= maxValue && input.value >= minValue) {
+		validInput(input);
+	} else {
+		invalidInput(input);
+	}
+}
 
-console.log(image);
+function invalidInput(input) {
+	input.parentNode.style = 'border-color : #ff3333;';
+	applyButton.disabled = true;
+}
+
+function validInput(input) {
+	input.parentNode.style = 'border-color : darkgray;';
+	applyButton.disabled = false;
+}

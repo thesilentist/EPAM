@@ -1,7 +1,7 @@
-let tableBody = document.querySelector('tbody');
-let addRowButton = document.querySelector('.addrow__button');
-let canvas = document.querySelector('.diagram-canvas');
-let someStartingData = [ 
+const tableBody = document.querySelector('tbody');
+const addRowButton = document.querySelector('.addrow__button');
+const canvas = document.querySelector('.diagram-canvas');
+const someStartingData = [ 
 	{'name' : 'Тернопільська', 'value' : 13824},
 	{'name' : 'Чернігівська', 'value' : 31903},
 	{'name' : 'Рівненська', 'value' : 20051},
@@ -25,27 +25,6 @@ addRowButton.addEventListener('click',() => {
 	addNewDefaultRow(tableBody);
 });
 
-function addNewDefaultRow (table) {
-	let newRow = document.createElement('tr');
-
-	let nameCell = newRow.appendChild(document.createElement('td'));
-	nameCell.textContent = "Нова область";
-	nameCell.className = "item__name";
-	nameCell.setAttribute('contenteditable',"true");
-	
-	let valueCell = newRow.appendChild(document.createElement('td'))
-	valueCell.textContent = "100";
-	valueCell.className = "item__value";
-	valueCell.setAttribute('contenteditable',"true");
-	
-	let deleteButton = newRow.appendChild(document.createElement('td'))
-	deleteButton.textContent = 'Видалити';
-	deleteButton.className = 'item__delete btn btn-link';
-	deleteButton.addEventListener('click', () => { deleteButton.parentNode.remove(); });
-
-	table.appendChild(newRow);
-}
-
 function addNewRow(table, name, value) {
 	let newRow = document.createElement('tr');
 	
@@ -67,6 +46,10 @@ function addNewRow(table, name, value) {
 	table.appendChild(newRow);
 }
 
+function addNewDefaultRow (table) {
+	addNewRow(table, 'Нова область', '100');
+}
+
 function redrawCanvas() {
 	let names = document.getElementsByClassName('item__name');
 	let values = document.getElementsByClassName('item__value');
@@ -81,8 +64,8 @@ function redrawCanvas() {
 	for (let element of values) {
 		let newElement = document.createElement('div');
 		newElement.className = "diagram-canvas__element";
-		canvas.style.gridTemplateColumns = "repeat(" + values.length + "," + (600 - 5*(values.length - 1))/values.length + "px";
-		newElement.style.height = parseInt(element.innerText) / maxValue * 100 + "%";
+		canvas.style.gridTemplateColumns = `repeat(${values.length},${(600 - 5*(values.length - 1))/values.length}px)`;
+		newElement.style.height = `${parseInt(element.innerText) / maxValue * 100}%`;
 		newElement.addEventListener('mouseover', () => {
 			newElement.innerText = element.innerText;
 		})
