@@ -1,0 +1,49 @@
+<!Doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./public/styles/css/style.css">
+	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_55WCjrAjlPpChXLJmzO79YUb5w0LrNw41l4EuhtSQy4Pxjj_&usqp=CAU">
+	<title>Tucanizator</title>
+</head>
+
+<body>
+	<section class="main"> 
+		<h2 class="main__header">Зміна властивостей зображення</h2>
+		<img class="main__image" src="./public/images/tucan.jpg" alt="tucanchik">
+	</section>
+	<section class="change-section">
+		<div class="sizechange">
+			<h2 class="sizechange__header">Зміна розмірів:</h2>
+			<div class="sizechange-input">
+				<label class="sizechange-input__label">Ширина (width)</label>
+				<input class="sizechange-input__number noarrows" value="500" id="widthInput">
+			</div>
+			<div class="sizechange-input">
+				<label class="sizechange-input__label">Висота (height)</label>
+				<input class="sizechange-input__number noarrows" value="281" id="heightInput">
+			</div>
+		</div>
+		<div class="borderchange">
+			<h2 class="borderchange__header">Зміна рамки:</h2>
+			<div class="borderchange-input">
+				<label class="borderchange-input__label">Товщина рамки</label>
+				<input class="borderchange-input__number noarrows" value="0" id="borderWidthInput">
+			</div>
+			<div class="borderchange-input">
+				<label class="borderchange-input__label">Колір рамки</label>
+				<input type="text" class="borderchange-input__text" value="black" id="borderColorInput">
+			</div>
+		</div>
+		<div class="morechange">
+			<h2 class="morechange__header">Додатково</h2>
+			<div class="morechange-input">
+				<label class="morechange-input__label">Альтернативний текст</label>
+				<input type="text" class="morechange-input__text" value="tucan" id="altInput">
+			</div>
+		</div>
+		<button class="apply__button">Застосувати</button>
+		<p class="warning">*Якщо кнопка не активна, перевірте чи всі поля введено правильно</p>
+	</section>
+	<script type="text/javascript" src="./public/javascripts/1.js"></script>
+</body>

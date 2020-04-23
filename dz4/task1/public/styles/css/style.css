@@ -1,0 +1,111 @@
+h2 {
+  margin: 0 0;
+}
+.main {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.main__header {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.main__image {
+  width: 500px;
+  height: 281px;
+}
+.change-section {
+  width: 500px;
+  margin: 0 auto;
+}
+.sizechange label,
+.borderchange label,
+.morechange label,
+.sizechange h2,
+.borderchange h2,
+.morechange h2,
+.sizechange input,
+.borderchange input,
+.morechange input {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: 0;
+  outline: 0;
+}
+.sizechange h2,
+.borderchange h2,
+.morechange h2 {
+  margin-top: 0.5em;
+}
+.sizechange-input,
+.borderchange-input,
+.morechange-input {
+  margin-top: 0.4em;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+.sizechange-input__label,
+.borderchange-input__label,
+.morechange-input__label {
+  display: inline-block;
+  box-sizing: border-box;
+  border-right: 1px solid darkgray !important;
+  padding-left: 0.5em;
+  width: 40%;
+  line-height: 2em;
+  color: gray;
+  background-color: whitesmoke;
+}
+.sizechange-input__number,
+.borderchange-input__number,
+.morechange-input__number,
+.sizechange-input__text,
+.borderchange-input__text,
+.morechange-input__text {
+  width: 58%;
+  line-height: 2em;
+}
+.apply__button {
+  margin-top: 1em;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: 0.5s;
+  font-size: 18px;
+  border-radius: 5px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: 1px solid #1976D2;
+  color: #1976D2;
+}
+.apply__button:hover {
+  background-color: #1976D2;
+  transition: all 0.5s ease-in-out;
+  border-color: white;
+  color: white;
+}
+.apply__button:disabled {
+  margin-top: 1em;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: 0.5s;
+  font-size: 18px;
+  border-radius: 5px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: 1px solid #7abbfa;
+  color: #7abbfa;
+}
+.noarrows {
+  -moz-appearance: textfield;
+}
+.noarrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.noarrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.warning {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 14px;
+}

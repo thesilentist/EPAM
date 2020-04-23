@@ -1,0 +1,99 @@
+h2{
+    margin: 0 0;
+}
+
+.main{
+	width: fit-content;
+	margin: 0 auto;
+	
+	&__header{
+		font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+	&__image{
+		width:500px;
+		height: 281px;
+	}
+}
+
+.change-section{
+	width: 500px;
+	margin: 0 auto;
+}
+
+.sizechange,.borderchange,.morechange{
+    label,h2,input{
+    	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    	border: 0;	
+    	outline: 0;
+    }
+    h2{
+    	margin-top: 0.5em;
+    }
+    &-input{
+    	margin-top: 0.4em;
+    	border: 1px solid darkgray;
+    	border-radius: 5px;
+    	&__label{
+    		display: inline-block;
+    		box-sizing: border-box;
+            border-right: 1px solid darkgray !important;
+            padding-left: .5em;
+            width: 40%;
+            line-height: 2em;
+            color:gray;
+    		background-color: whitesmoke;
+    	}
+    	&__number,&__text{
+    		width: 58%;
+            line-height: 2em;
+    	}
+    }
+}
+
+.apply__button {
+	margin-top: 1em;
+	outline: none;
+    cursor: pointer;
+    background: none;
+    transition: .5s;
+    font-size:18px;
+    border-radius: 5px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border: 1px solid #1976D2;
+ 	color: #1976D2;
+  	&:hover {
+    	background-color: #1976D2;
+    	transition: all 0.5s ease-in-out;
+    	border-color: white;
+      	color: white;
+  	}
+    &:disabled {
+        margin-top: 1em;
+        outline: none;
+        cursor: pointer;
+        background: none;
+        transition: .5s;
+        font-size:18px;
+        border-radius: 5px;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border: 1px solid #7abbfa;
+        color: #7abbfa;
+    }
+}
+
+.noarrows{
+	&::-webkit-outer-spin-button{
+		-webkit-appearance: none;
+    	margin: 0;
+	}
+	&::-webkit-inner-spin-button{
+		-webkit-appearance: none;
+    	margin: 0;
+    }
+     -moz-appearance: textfield;
+}
+
+.warning {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 14px
+}
