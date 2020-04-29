@@ -1,0 +1,43 @@
+body {
+    background-color: lightgrey;
+}
+
+.main {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 2.5em 4em;
+    box-sizing :border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 2.5em;
+    grid-row-gap: 2.5em;
+    background-color: white;
+    &-image {
+        box-sizing: border-box;
+        border: 1px solid black;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes rotation{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner{
+    margin: 0 auto;
+    margin-bottom: 50em;
+    display: none;
+    width: 5em;
+    height: 5em;
+    border-top: 3px solid rgba(#000, .5);
+    border-right: 3px solid transparent;
+    border-radius: 50%;
+    animation: rotation .8s linear infinite;
+  }
